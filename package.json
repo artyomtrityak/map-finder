@@ -40,7 +40,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.26.1",
     "d3": "^5.5.0",
-    "eslint": "^3.15.0",
+    "eslint": "^4.15.0",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.9.0",
     "file-loader": "^0.10.0",
