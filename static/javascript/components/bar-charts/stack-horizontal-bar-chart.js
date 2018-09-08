@@ -5,19 +5,18 @@ import Axis from "./axis";
 
 const MARGINS = { top: 20, right: 30, bottom: 30, left: 100 };
 
-class StackHorisontalBarChart extends React.Component {
-  state = {
-    keys: ["apples", "bananas", "cherries"],
-    data: [
-      { month: "Q1-2017", apples: 300, bananas: 500, cherries: 700, total: 1500 },
-      { month: "Q2-2017", apples: 500, bananas: 400, cherries: 1000, total: 1900 },
-      { month: "Q3-2017", apples: 700, bananas: 200, cherries: 500, total: 1400 },
-      { month: "Q4-2017", apples: 300, bananas: 700, cherries: 200, total: 1200 }
-    ]
-  };
-
+class StackHorizontalBarChart extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      keys: ["apples", "bananas", "cherries"],
+      data: [
+        { month: "Q1-2017", apples: 300, bananas: 500, cherries: 700, total: 1500 },
+        { month: "Q2-2017", apples: 500, bananas: 400, cherries: 1000, total: 1900 },
+        { month: "Q3-2017", apples: 700, bananas: 200, cherries: 500, total: 1400 },
+        { month: "Q4-2017", apples: 300, bananas: 700, cherries: 200, total: 1200 }
+      ]
+    };
     this.renderStacks = this.renderStacks.bind(this);
     this.axisRef = React.createRef();
   }
@@ -96,4 +95,4 @@ class StackHorisontalBarChart extends React.Component {
   }
 }
 
-export default WithSize(StackHorisontalBarChart);
+export default WithSize(StackHorizontalBarChart);

@@ -1,9 +1,7 @@
 import React from "react";
 import * as d3 from "d3";
 
-export default class HorisontalBarChart2 extends React.Component {
-  static displayName = "Axis";
-
+export default class HorizontalBarChart2 extends React.Component {
   constructor(props) {
     super(props);
     this.axisXRef = React.createRef();

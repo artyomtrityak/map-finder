@@ -5,13 +5,12 @@ import _ from "lodash";
 // With HOC
 const WithSize = Child =>
   class extends React.Component {
-    state = {
-      width: null,
-      height: null
-    };
-
     constructor(props) {
       super(props);
+      this.state = {
+        width: null,
+        height: null
+      };
       this.setSize = this.setSize.bind(this);
       this.setSizeDebounced = _.debounce(this.setSize, 1000);
       window.addEventListener("resize", this.setSizeDebounced);

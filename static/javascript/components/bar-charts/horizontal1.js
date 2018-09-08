@@ -9,13 +9,15 @@ const OFFSETS = {
   bottom: 0
 };
 
-class HorisontalBarChart1 extends React.Component {
-  static displayName = "HorisontalBarChart1";
-  state = {
-    data: [4, 8, 15, 16, 23, 42, 44, 22, 11, 2],
-    scaleX: null,
-    scaleY: null
-  };
+class HorizontalBarChart1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [4, 8, 15, 16, 23, 42, 44, 22, 11, 2],
+      scaleX: null,
+      scaleY: null
+    };
+  }
 
   componentDidMount() {
     this.setState({
@@ -67,4 +69,4 @@ class HorisontalBarChart1 extends React.Component {
   }
 }
 
-export default WithSize(HorisontalBarChart1);
+export default WithSize(HorizontalBarChart1);

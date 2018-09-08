@@ -12,15 +12,13 @@ const MARGINS = {
 };
 
 class SvgVerticalBarChart extends React.Component {
-  static displayName = "SvgVerticalBarChart";
-  state = {
-    data: generateArray(),
-    scaleX: null,
-    scaleY: null
-  };
-
   constructor(props) {
     super(props);
+    this.state = {
+      data: generateArray(),
+      scaleX: null,
+      scaleY: null
+    };
     this.renderBar = this.renderBar.bind(this);
   }
 

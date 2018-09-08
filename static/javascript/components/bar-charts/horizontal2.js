@@ -11,12 +11,13 @@ const OFFSETS = {
   right: 50
 };
 
-class HorisontalBarChart2 extends React.Component {
-  static displayName = "HorisontalBarChart2";
-
-  state = {
-    data: generateArray()
-  };
+class HorizontalBarChart2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: generateArray()
+    };
+  }
 
   componentDidMount() {
     this.setState({
@@ -37,7 +38,7 @@ class HorisontalBarChart2 extends React.Component {
 
   createScaleX() {
     let minX = d3.min(this.state.data, x => x.val);
-    // Add nevative support
+    // Add negative support
     minX = minX > 0 ? 0 : minX;
     return d3
       .scaleLinear()
@@ -87,4 +88,4 @@ class HorisontalBarChart2 extends React.Component {
   }
 }
 
-export default WithSize(HorisontalBarChart2);
+export default WithSize(HorizontalBarChart2);

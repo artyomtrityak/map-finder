@@ -3,10 +3,9 @@ import * as d3 from "d3";
 import WithSize from "../../shared/with-size";
 
 class PieChartWithLabelsOutside extends React.Component {
-  svgRef = React.createRef();
-
   constructor(props) {
     super(props);
+    this.svgRef = React.createRef();
     this.state = {
       data: [{ type: "error", count: 5 }, { type: "success", count: 15 }, { type: "warning", count: 3 }, { type: "aborted", count: 2 }],
       arc: null,

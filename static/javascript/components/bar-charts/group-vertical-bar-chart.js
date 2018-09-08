@@ -1,6 +1,5 @@
 import React from "react";
 import * as d3 from "d3";
-import { generateArray } from "../../data-layer/array-processors";
 import WithSize from "../../shared/with-size";
 import Axis from "./axis";
 
@@ -19,18 +18,16 @@ const DATA = [
 ];
 
 class SvgVerticalGroupedBarChart extends React.Component {
-  static displayName = "SvgVerticalGroupedBarChart";
-  state = {
-    keys: ["success", "error"],
-    data: DATA,
-    scaleX: null,
-    scaleY: null,
-    subscaleX: null,
-    colors: null
-  };
-
   constructor(props) {
     super(props);
+    this.state = {
+      keys: ["success", "error"],
+      data: DATA,
+      scaleX: null,
+      scaleY: null,
+      subscaleX: null,
+      colors: null
+    };
     this.renderGroup = this.renderGroup.bind(this);
   }
 

@@ -1,9 +1,6 @@
 import React from "react";
 
 export default class ReactForceBasicChart extends React.Component {
-  static displayName = "ReactForceBasicChart";
-  static propTypes = {};
-
   constructor(props) {
     super(props);
 

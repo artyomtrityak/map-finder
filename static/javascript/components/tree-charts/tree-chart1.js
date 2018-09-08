@@ -2,25 +2,28 @@ import React from "react";
 import * as d3 from "d3";
 
 export default class TreeChart extends React.Component {
-  state = {
-    root: null,
-    width: 700,
-    height: 500,
-    data: [
-      { name: "ProjectA", parent: "" },
-      { name: "ApplicationA", parent: "ProjectA" },
-      { name: "EnvironmentB", parent: "ProjectA" },
+  constructor(props) {
+    super(props);
+    this.state = {
+      root: null,
+      width: 700,
+      height: 500,
+      data: [
+        { name: "ProjectA", parent: "" },
+        { name: "ApplicationA", parent: "ProjectA" },
+        { name: "EnvironmentB", parent: "ProjectA" },
 
-      { name: "TierC", parent: "ApplicationA" },
-      { name: "TierD", parent: "ApplicationA" },
-      { name: "TierE", parent: "ApplicationA" },
+        { name: "TierC", parent: "ApplicationA" },
+        { name: "TierD", parent: "ApplicationA" },
+        { name: "TierE", parent: "ApplicationA" },
 
-      { name: "ServiceF", parent: "EnvironmentB" },
+        { name: "ServiceF", parent: "EnvironmentB" },
 
-      { name: "ContainerG", parent: "TierE" },
-      { name: "ContainerH", parent: "TierE" }
-    ]
-  };
+        { name: "ContainerG", parent: "TierE" },
+        { name: "ContainerH", parent: "TierE" }
+      ]
+    };
+  }
 
   componentDidMount() {
     const tree = d3.tree().size([this.state.height, this.state.width - 160]);
