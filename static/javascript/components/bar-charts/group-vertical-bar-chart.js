@@ -18,6 +18,7 @@ const DATA = [
 ];
 
 class SvgVerticalGroupedBarChart extends React.Component {
+  static displayName = "SvgVerticalGroupedBarChart";
   constructor(props) {
     super(props);
     this.state = {

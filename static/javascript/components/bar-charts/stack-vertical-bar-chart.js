@@ -6,6 +6,8 @@ import Axis from "./axis";
 const MARGINS = { top: 20, right: 30, bottom: 50, left: 40 };
 
 class StackVerticalBarChart extends React.Component {
+  static displayName = "StackVerticalBarChart";
+
   constructor(props) {
     super(props);
     this.renderStacks = this.renderStacks.bind(this);

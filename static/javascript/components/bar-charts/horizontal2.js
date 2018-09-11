@@ -12,6 +12,8 @@ const OFFSETS = {
 };
 
 class HorizontalBarChart2 extends React.Component {
+  static displayName = "HorizontalBarChart2";
+
   constructor(props) {
     super(props);
     this.state = {
